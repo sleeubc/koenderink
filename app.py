@@ -1014,7 +1014,7 @@ def render_client_scale_space(explorer_data):
       }});
     </script>
     """
-    components.html(html, height=760, scrolling=False)
+    components.html(html, height=980, scrolling=False)
 
 
 
