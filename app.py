@@ -378,7 +378,7 @@ def render_client_scale_space(explorer_data):
         #koenderink-client-app {{
           --panel-gap: 0.85rem;
           --panel-radius: 20px;
-          --panel-title-size: 1rem;
+          --panel-title-size: 1.14rem;
           --plot-font-size: 18px;
           font-family: 'Inter', sans-serif;
           color: #111827;
@@ -393,13 +393,13 @@ def render_client_scale_space(explorer_data):
           gap: 0.45rem;
         }}
         #koenderink-client-app .subtitle {{
-          font-size: 1.04rem;
+          font-size: 1.16rem;
           line-height: 1.35;
           color: #374151;
           padding: 0.1rem 0.15rem 0;
         }}
         #koenderink-client-app .citation {{
-          font-size: 0.88rem;
+          font-size: 0.98rem;
           line-height: 1.3;
           color: #6b7280;
           padding: 0 0.15rem;
@@ -554,14 +554,14 @@ def render_client_scale_space(explorer_data):
           #koenderink-client-app {{
             --panel-gap: 0.55rem;
             --panel-radius: 16px;
-            --panel-title-size: 0.9rem;
+            --panel-title-size: 1rem;
             --plot-font-size: 16px;
           }}
         }}
 
         @media (max-width: 720px) {{
           #koenderink-client-app .plot-title {{
-            font-size: 0.68rem;
+            font-size: 0.88rem;
             letter-spacing: 0.12em;
           }}
           #koenderink-client-app .control-bar {{
@@ -583,7 +583,7 @@ def render_client_scale_space(explorer_data):
 
       <div class="plots-grid">
         <div class="plot-panel">
-          <div class="plot-title">Smoothed Surface</div>
+          <div class="plot-title">Smoothed Density Surface</div>
           <div id="plot3d" class="plot-host"></div>
         </div>
         <div class="plot-panel">
