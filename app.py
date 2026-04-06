@@ -378,8 +378,8 @@ def render_client_scale_space(explorer_data):
         #koenderink-client-app {{
           --panel-gap: 0.85rem;
           --panel-radius: 20px;
-          --panel-title-size: 0.92rem;
-          --plot-font-size: 17px;
+          --panel-title-size: 1rem;
+          --plot-font-size: 18px;
           font-family: 'Inter', sans-serif;
           color: #111827;
           position: relative;
@@ -393,13 +393,13 @@ def render_client_scale_space(explorer_data):
           gap: 0.45rem;
         }}
         #koenderink-client-app .subtitle {{
-          font-size: 0.96rem;
+          font-size: 1.04rem;
           line-height: 1.35;
           color: #374151;
           padding: 0.1rem 0.15rem 0;
         }}
         #koenderink-client-app .citation {{
-          font-size: 0.78rem;
+          font-size: 0.88rem;
           line-height: 1.3;
           color: #6b7280;
           padding: 0 0.15rem;
@@ -554,8 +554,8 @@ def render_client_scale_space(explorer_data):
           #koenderink-client-app {{
             --panel-gap: 0.55rem;
             --panel-radius: 16px;
-            --panel-title-size: 0.82rem;
-            --plot-font-size: 15px;
+            --panel-title-size: 0.9rem;
+            --plot-font-size: 16px;
           }}
         }}
 
@@ -844,7 +844,7 @@ def render_client_scale_space(explorer_data):
             bgcolor: 'rgba(255, 255, 255, 0.92)',
             bordercolor: 'rgba(17, 24, 39, 0.08)',
             borderwidth: 1,
-            font: {{ family: "'Inter', 'Helvetica', 'Arial', sans-serif", color: '#111827', size: window.innerWidth < 820 ? 11 : 12 }},
+            font: {{ family: "'Inter', 'Helvetica', 'Arial', sans-serif", color: '#111827', size: Math.max(14, (parseInt(getComputedStyle(root).getPropertyValue('--plot-font-size'), 10) || 18) - 1) }},
             x: legend.x,
             y: legend.y,
             xanchor: legend.xanchor,
@@ -900,7 +900,7 @@ def render_client_scale_space(explorer_data):
             bgcolor: 'rgba(255, 255, 255, 0.92)',
             bordercolor: 'rgba(17, 24, 39, 0.08)',
             borderwidth: 1,
-            font: {{ family: "'Inter', 'Helvetica', 'Arial', sans-serif", color: '#111827', size: window.innerWidth < 820 ? 11 : 12 }},
+            font: {{ family: "'Inter', 'Helvetica', 'Arial', sans-serif", color: '#111827', size: Math.max(14, (parseInt(getComputedStyle(root).getPropertyValue('--plot-font-size'), 10) || 18) - 1) }},
             yanchor: legend.yanchor,
             y: legend.y,
             xanchor: legend.xanchor,
