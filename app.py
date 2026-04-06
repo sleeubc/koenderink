@@ -368,7 +368,6 @@ def render_client_scale_space(explorer_data):
           background: #f3f4f6;
         }}
         #koenderink-client-app {{
-          --app-height: 760px;
           --panel-gap: 0.85rem;
           --panel-radius: 20px;
           --panel-title-size: 0.72rem;
@@ -377,7 +376,7 @@ def render_client_scale_space(explorer_data):
           color: #111827;
           position: relative;
           width: 100%;
-          height: var(--app-height);
+          height: 100%;
           overflow: hidden;
           background: #f3f4f6;
           font-size: 1rem;
@@ -554,7 +553,7 @@ def render_client_scale_space(explorer_data):
           }}
         }}
 
-        @media (max-width: 700px), (max-height: 620px) {{
+        @media (max-width: 700px) {{
           #koenderink-client-app .plots-grid {{
             grid-template-columns: 1fr;
             grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
@@ -618,22 +617,12 @@ def render_client_scale_space(explorer_data):
 
       slider.max = String(explorer.frames.length - 1);
 
-      function syncViewportHeight() {{
-        const viewportHeight = window.innerHeight || 760;
-        const host = window.location.hostname || '';
-        const isLocalHost = host === 'localhost' || host === '127.0.0.1' || host === '0.0.0.0';
-        const clampedHeight = isLocalHost
-          ? Math.max(460, Math.min(720, viewportHeight - 120))
-          : Math.max(560, Math.min(780, viewportHeight - 24));
-        root.style.setProperty('--app-height', `${{clampedHeight}}px`);
-      }}
-
       function isCompactViewport() {{
-        return window.innerWidth < 820 || window.innerHeight < 700;
+        return window.innerWidth < 820;
       }}
 
       function legendConfig() {{
-        if (window.innerWidth < 700 || window.innerHeight < 620) {{
+        if (window.innerWidth < 700) {{
           return {{
             visible: false,
           }};
@@ -1006,7 +995,6 @@ def render_client_scale_space(explorer_data):
         plot2d.on('plotly_restyle', () => captureVisibility(plot2d, 'plot2d'));
       }}
 
-      syncViewportHeight();
       renderFrame(0);
       attachHandlers();
 
@@ -1022,12 +1010,11 @@ def render_client_scale_space(explorer_data):
         }}
       }});
       window.addEventListener('resize', () => {{
-        syncViewportHeight();
         renderFrame(Number(slider.value));
       }});
     </script>
     """
-    components.html(html, height=760, scrolling=False)
+    components.html(html, height=660, scrolling=False)
 
 
 
