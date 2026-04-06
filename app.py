@@ -38,10 +38,10 @@ html, body, [data-testid="stAppViewContainer"], .stApp {
     overflow: hidden;
 }
 .block-container {
-    padding-top: 0.1rem !important;
+    padding-top: 0 !important;
     padding-bottom: 0rem !important;
-    padding-left: 0.85rem !important;
-    padding-right: 0.85rem !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
     max-width: none !important;
 }
 .stApp {
@@ -51,12 +51,23 @@ html, body, [data-testid="stAppViewContainer"], .stApp {
 }
 [data-testid="stHeader"] {
     background: transparent;
+    height: 0 !important;
+    min-height: 0 !important;
 }
 [data-testid="stToolbar"] {
-    right: 0.5rem;
+    display: none !important;
 }
 [data-testid="stMainBlockContainer"] {
-    padding-top: 0.1rem !important;
+    padding-top: 0 !important;
+}
+[data-testid="stDecoration"] {
+    display: none !important;
+}
+[data-testid="stStatusWidget"] {
+    display: none !important;
+}
+[data-testid="stAppViewBlockContainer"] {
+    padding-top: 0 !important;
 }
 [data-testid="stExpander"] {
     margin-top: 0.4rem;
@@ -609,7 +620,7 @@ def render_client_scale_space(explorer_data):
 
       function syncViewportHeight() {{
         const viewportHeight = window.innerHeight || 760;
-        const clampedHeight = Math.max(430, Math.min(660, viewportHeight - 170));
+        const clampedHeight = Math.max(460, Math.min(720, viewportHeight - 120));
         root.style.setProperty('--app-height', `${{clampedHeight}}px`);
       }}
 
