@@ -620,7 +620,11 @@ def render_client_scale_space(explorer_data):
 
       function syncViewportHeight() {{
         const viewportHeight = window.innerHeight || 760;
-        const clampedHeight = Math.max(560, Math.min(780, viewportHeight - 24));
+        const host = window.location.hostname || '';
+        const isLocalHost = host === 'localhost' || host === '127.0.0.1' || host === '0.0.0.0';
+        const clampedHeight = isLocalHost
+          ? Math.max(460, Math.min(720, viewportHeight - 120))
+          : Math.max(560, Math.min(780, viewportHeight - 24));
         root.style.setProperty('--app-height', `${{clampedHeight}}px`);
       }}
 
