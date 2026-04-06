@@ -49,6 +49,9 @@ html, body, [data-testid="stAppViewContainer"], .stApp {
     background: #f3f4f6;
     color: #111827;
 }
+[data-testid="stVerticalBlock"] {
+    gap: 0 !important;
+}
 [data-testid="stHeader"] {
     background: transparent;
     height: 0 !important;
@@ -68,6 +71,11 @@ html, body, [data-testid="stAppViewContainer"], .stApp {
 }
 [data-testid="stAppViewBlockContainer"] {
     padding-top: 0 !important;
+}
+[data-testid="element-container"]:has(iframe[title="streamlit-component"]) {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
 }
 [data-testid="stExpander"] {
     margin-top: 0.4rem;
@@ -370,8 +378,8 @@ def render_client_scale_space(explorer_data):
         #koenderink-client-app {{
           --panel-gap: 0.85rem;
           --panel-radius: 20px;
-          --panel-title-size: 0.72rem;
-          --plot-font-size: 13px;
+          --panel-title-size: 0.82rem;
+          --plot-font-size: 15px;
           font-family: 'Inter', sans-serif;
           color: #111827;
           position: relative;
@@ -445,7 +453,7 @@ def render_client_scale_space(explorer_data):
         #koenderink-client-app .control-button {{
           min-width: 4.8rem;
           padding: 0 0.9rem;
-          font-size: 0.78rem;
+          font-size: 0.86rem;
           font-weight: 600;
           cursor: pointer;
         }}
@@ -455,11 +463,11 @@ def render_client_scale_space(explorer_data):
         }}
         #koenderink-client-app .speed-select {{
           padding: 0 0.7rem;
-          font-size: 0.76rem;
+          font-size: 0.84rem;
           cursor: pointer;
         }}
         #koenderink-client-app .sigma-label {{
-          font-size: 1rem;
+          font-size: 1.1rem;
           font-weight: 600;
           color: #111827;
           line-height: 1;
@@ -534,8 +542,8 @@ def render_client_scale_space(explorer_data):
           #koenderink-client-app {{
             --panel-gap: 0.55rem;
             --panel-radius: 16px;
-            --panel-title-size: 0.68rem;
-            --plot-font-size: 12px;
+            --panel-title-size: 0.74rem;
+            --plot-font-size: 13px;
           }}
         }}
 
