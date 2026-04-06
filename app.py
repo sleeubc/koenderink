@@ -378,8 +378,8 @@ def render_client_scale_space(explorer_data):
         #koenderink-client-app {{
           --panel-gap: 0.85rem;
           --panel-radius: 20px;
-          --panel-title-size: 0.82rem;
-          --plot-font-size: 15px;
+          --panel-title-size: 0.92rem;
+          --plot-font-size: 17px;
           font-family: 'Inter', sans-serif;
           color: #111827;
           position: relative;
@@ -387,10 +387,22 @@ def render_client_scale_space(explorer_data):
           height: 100%;
           overflow: hidden;
           background: #f3f4f6;
-          font-size: 1rem;
+          font-size: 1.08rem;
           display: flex;
           flex-direction: column;
-          gap: 0.55rem;
+          gap: 0.45rem;
+        }}
+        #koenderink-client-app .subtitle {{
+          font-size: 0.96rem;
+          line-height: 1.35;
+          color: #374151;
+          padding: 0.1rem 0.15rem 0;
+        }}
+        #koenderink-client-app .citation {{
+          font-size: 0.78rem;
+          line-height: 1.3;
+          color: #6b7280;
+          padding: 0 0.15rem;
         }}
 
         #koenderink-client-app .plots-grid {{
@@ -453,7 +465,7 @@ def render_client_scale_space(explorer_data):
         #koenderink-client-app .control-button {{
           min-width: 4.8rem;
           padding: 0 0.9rem;
-          font-size: 0.86rem;
+          font-size: 0.94rem;
           font-weight: 600;
           cursor: pointer;
         }}
@@ -463,11 +475,11 @@ def render_client_scale_space(explorer_data):
         }}
         #koenderink-client-app .speed-select {{
           padding: 0 0.7rem;
-          font-size: 0.84rem;
+          font-size: 0.92rem;
           cursor: pointer;
         }}
         #koenderink-client-app .sigma-label {{
-          font-size: 1.1rem;
+          font-size: 1.22rem;
           font-weight: 600;
           color: #111827;
           line-height: 1;
@@ -542,8 +554,8 @@ def render_client_scale_space(explorer_data):
           #koenderink-client-app {{
             --panel-gap: 0.55rem;
             --panel-radius: 16px;
-            --panel-title-size: 0.74rem;
-            --plot-font-size: 13px;
+            --panel-title-size: 0.82rem;
+            --plot-font-size: 15px;
           }}
         }}
 
@@ -594,6 +606,14 @@ def render_client_scale_space(explorer_data):
           <option value="300">2x</option>
           <option value="150">4x</option>
         </select>
+      </div>
+
+      <div class="subtitle">
+        Gaussian smoothing across scale simplifies structure without creating new peaks. As σ increases, peaks and saddle points can merge and annihilate, leaving a smooth slope behind.
+      </div>
+
+      <div class="citation">
+        Based on scale-space concepts from Jan J. Koenderink, “The Structure of Images” (1984).
       </div>
     </div>
 
