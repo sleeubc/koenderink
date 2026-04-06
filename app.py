@@ -1034,35 +1034,6 @@ def main():
     # ─────────────────────────────────────────────────────────────
     render_client_scale_space(get_scale_space_frames())
 
-    # ─────────────────────────────────────────────────────────────
-    # Bottom Expander for Math & Details
-    # ─────────────────────────────────────────────────────────────
-    with st.expander("ℹ️ About this Visualization & The Mathematics"):
-        st.markdown("""
-        **Koenderink Scale-Space Explorer** · Visualizing Economic Density (POIs & Population)
-        
-        Demonstrates the structural evolution of economic landscapes as seen through Gaussian scale space.
-        
-        ### 🔬 Economic Landscapes
-        The surfaces above represent the **smoothed density of economic activities** such as population counts or Point-of-Interest (POI) distributions. Peaks represent high-concentration economic centers; saddle points represent the relative "depressions" or passes between major hubs. 
-
-        ### 📜 Scale-Space Logic
-        As you increase the scale parameter, you are mathematically "viewing the economy from a higher altitude," aggregating local noise into coarse, regional patterns. The **Axiom of Causality** ensures that no new centers of activity appear out of thin air; they only merge and simplify.
-        
-        ### ⚡ The Annihilation (Fold Catastrophe)
-        When a subordinate peak and its neighboring saddle point collide as scale increases, they undergo a **fold catastrophe** — one of René Thom's elementary catastrophes. The peak and the saddle simultaneously *annihilate* each other, leaving a smooth slope behind.
-        
-        ### 🧮 The Mathematics
-        **Diffusion equation:**  
-        ∂K/∂t = ∂²K/∂x² + ∂²K/∂y²
-
-        **Hessian determinant:**  
-        H = K_xx · K_yy − K_xy²
-
-        - **H > 0** → Extremum (peak/pit)
-        - **H < 0** → Saddle point
-        """)
-
 
 if __name__ == "__main__":
     main()
