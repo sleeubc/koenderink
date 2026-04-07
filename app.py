@@ -609,12 +609,13 @@ def render_client_scale_space(explorer_data):
       </div>
 
       <div class="subtitle">
-        Gaussian smoothing across scale simplifies structure without creating new peaks. As σ increases, peaks and saddle points can merge and annihilate, leaving a smooth slope behind.
+        In Koenderink’s 1984 paper, “The Structure of Images,” Gaussian smoothing across scale is the unique natural way to simplify an image without creating new peaks.
       </div>
 
       <div class="citation">
-        Based on scale-space concepts from Jan J. Koenderink, “The Structure of Images” (1984).
+        The second result, demonstrated here, is topological: as σ increases, peaks and saddle points merge and annihilate, revealing a hierarchical structure of blobs (i.e., peak-centered regions) ordered by how long they persist.
       </div>
+
     </div>
 
     <script>{plotly_js}</script>
