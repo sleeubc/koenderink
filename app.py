@@ -618,7 +618,7 @@ def render_client_scale_space(explorer_data):
       </div>
 
       <ol class="explanation-list">
-        <li>Gaussian smoothing across scale is the unique natural way to simplify an image without creating new peaks. For example, in delineating cities and subcenters, a city cannot spring up from an empty field as σ increases.</li>
+        <li>Gaussian smoothing across scale is the unique natural way to simplify an image without creating new peaks. For example, in delineating cities and subcenters, a city cannot pop up from an empty field as σ increases.</li>
         <li>As σ increases, peaks and saddle points merge and annihilate, leaving a smooth slope behind. This app demonstrates the second result.</li>
       </ol>
 
