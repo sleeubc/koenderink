@@ -392,16 +392,10 @@ def render_client_scale_space(explorer_data):
           flex-direction: column;
           gap: 0.45rem;
         }}
-        #koenderink-client-app .subtitle {{
-          font-size: 1.16rem;
+        #koenderink-client-app .explanation {{
+          font-size: 1.04rem;
           line-height: 1.35;
           color: #374151;
-          padding: 0.1rem 0.15rem 0;
-        }}
-        #koenderink-client-app .citation {{
-          font-size: 0.98rem;
-          line-height: 1.3;
-          color: #6b7280;
           padding: 0 0.15rem;
         }}
 
@@ -608,12 +602,16 @@ def render_client_scale_space(explorer_data):
         </select>
       </div>
 
-      <div class="subtitle">
-        In Koenderink’s 1984 paper, “The Structure of Images,” Gaussian smoothing across scale is the unique natural way to simplify an image without creating new peaks.
+      <div class="explanation">
+        Koenderink’s 1984 paper, “The Structure of Images,” has two main results. First, Gaussian smoothing across scale is the unique natural way to simplify an image without creating new peaks. For example, in delineating cities and subcenters, a city cannot spring up from an empty field as σ increases.
       </div>
 
-      <div class="citation">
-        The second result, demonstrated here, is topological: as σ increases, peaks and saddle points merge and annihilate, revealing a hierarchical structure of blobs (i.e., peak-centered regions) ordered by how long they persist.
+      <div class="explanation">
+        Second, as σ increases, peaks and saddle points merge and annihilate, leaving a smooth slope behind. This app demonstrates the second result.
+      </div>
+
+      <div class="explanation">
+        These two results together imply a hierarchical structure of blobs (i.e., peak-centered regions) as we change σ.
       </div>
 
     </div>
